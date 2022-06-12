@@ -217,6 +217,9 @@ def get_historical_eod_price(fsym, tsyms, date, e='all', try_conversion=True):
     # load data
     url = build_url("pricehistorical", fsym=fsym, tsyms=tsyms, ts=ts,
                     e=e, try_conversion=try_conversion)
+    
+    print(url)
+    
     data = load_data(url)
 
     return data
