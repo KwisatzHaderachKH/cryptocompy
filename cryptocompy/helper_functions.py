@@ -61,6 +61,9 @@ def build_url(func, **kwargs):
 
         elif key == 'limit':
             url_parts.append("limit={}".format(value))
+        
+        elif key == 'ts':
+            url_parts.append("ts={}".format(value))
 
     # put url together
     url = url + "&".join(url_parts)
